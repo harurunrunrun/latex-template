@@ -1,0 +1,75 @@
+\documentclass[a4j,10.5ptj]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage{breqn}
+\usepackage{url}
+\usepackage{amsfonts}
+\usepackage{threeparttable}
+
+
+\renewcommand{\lstlistingname}{ソースコード}
+
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\normalsize},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex,
+}
+
+\newcommand{\makecode}[4]{
+  \begin{lstlisting}[caption=#1,label=#2,language=#3]
+    #4
+  \end{lstlisting}
+}
+
+\newcommand{\includecode}[4]{
+  \lstinputlisting[caption=#1,label=#2,language=#3]{#4}
+}
+
+\newcommand{\maketable}[4]{
+  \begin{table}[htb]
+    \caption{#1}
+    \label{#2}
+    \centering
+    \begin{tabular}{#3}
+      #4
+    \end{tabular}
+  \end{table}
+}
+
+\newcommand{\makeimage}[]{
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[scale=#1]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+\title{template}
+\author{template user}
+\date{\number\year 年\number\month 月\number\day 日}
+
+\begin{document}
+
+  \maketitle
+
+  
+
+  
+
+
+\end{document}
